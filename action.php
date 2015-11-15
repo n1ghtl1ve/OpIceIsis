@@ -57,7 +57,7 @@
             <p><?php
 
                     //POSTS for DB
-                    $name = strip_tags($_POST['rname']) ;
+                    $name = strip_tags($_POST['rname']);
                             $name = htmlspecialchars($name);
                             echo "Name: $name <br />";
                     $pic = strip_tags($_POST['pic']);
@@ -86,13 +86,11 @@
                     echo "Time: $adate <br />";
 
                 //DB-Connection
-                $db = mysqli_connect("localhost","root","hallo","opiceisis");
-                if (!db) {
-                  exit("Verbindungfehler:" .mysqli_connect_error());
-                }
+                $db = mysqli_connect("127.0.0.1", "root", "hallo");
+                                $selected = mysqli_select_db("opiceisis",$db);
 
                 //DB
-                $dbform = mysqli_query($_link, "INSERT INTO isismembers (realname, location, twitter, facebook, youtube, dateadd)
+                $dbform = mysqli_query($db, "INSERT INTO isismembers (realname, location, twitter, facebook, youtube, dateadd)
                                             VALUES('$name', '$loc', '$twitter', '$fb', '$yt','$adate')");
             ?></p>
                     </div>

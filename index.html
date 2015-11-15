@@ -58,26 +58,8 @@
                         <h1>Welcome to #opIceISIS</h1>
 			<h3>Where no IS member shall rest</h3>
 			<br>
-                        <p><?php
-                        $_db_host = "localhost";
-                        $_db_username = "root";
-                        $_db_passwort = "hallo";
-                        $_db_datenbank = "opiceisis";
-                        $_link = mysqli_connect($_db_host, $_db_username, $_db_passwort);
-                        # Test if it works
-                        if (!$_link)
-                        {
-                        # Didnt work cancel!
-                        die("DIE: " .
-                        mysqli_error());
-                        }
-
-                        //# Connections works
-                        echo "Connections works.<br />";
-
-                        //# Select Database
-                        mysqli_select_db($_db_datenbank, $_link);
-                        ?></p>
+                        <p><?php$db = mysqli_connect("127.0.0.1", "root", "hallo");
+                                $selected = mysqli_select_db("opiceisis",$db);?></p>
                     </div>
                 </div>
             </div>
