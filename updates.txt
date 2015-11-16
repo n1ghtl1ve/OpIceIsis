@@ -1,0 +1,5 @@
+Site under construction (11/14/15)
+Database functionality complete. Front end design underway (11/15/15)
+Archive Database dump available. Parse using comma delimter for data ingestion. (11/15/15)
+Only Search and Add functionality available. Edit comming soon (11/15/15)
+-Guru

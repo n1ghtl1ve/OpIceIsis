@@ -12,10 +12,10 @@
     <title>#OpIceISIS</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="./css/simple-sidebar.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,17 +35,20 @@
             <ul class="sidebar-nav">
 		<br><center><img src="./img/face.png"/></center>
                 <li class="sidebar-brand">
-                        <a href="index.html">#OpIceISIS</b>
+                        <a href="index.php">#OpIceISIS</b>
                 </li>
                 <li>
-                    <a href="add.html">Add IS enthousiast</a>
+                    <a href="add.php">Add IS Enthusiast</a>
                 </li>
                 <li>
-                    <a href="search.html">Search/Edit IS enthousiast</a>
+                    <a href="search.php">Search IS Enthusiast</a>
                 </li>
                 <li>
-                    <a href="rules.html">Rules</a>
+                    <a href="rules.php">Rules</a>
                 </li>
+		<li>
+		<a href="archive.php">Archive</a>
+		</li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -55,8 +58,11 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>Rule</h1>
-                        <p>Rules here</p>
+                        <h1>Welcome to #opIceISIS</h1>
+			<h3>Where no IS member shall rest</h3>
+			<br>
+                        <p>Updates:</p><br>
+			<?php $handle = @fopen("./updates.txt", "r"); if ($handle) { while (($buffer = fgets($handle, 4096)) !== false) { echo "<p>$buffer</p>";} fclose($handle);}?>
                     </div>
                 </div>
             </div>
