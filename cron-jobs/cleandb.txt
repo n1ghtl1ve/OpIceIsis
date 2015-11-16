@@ -1,0 +1,1 @@
+DELETE FROM isismembers WHERE (realname LIKE '') AND (location LIKE '') AND (twitter LIKE '') AND (facebook LIKE '') AND (youtube LIKE '') AND (other LIKE '');
