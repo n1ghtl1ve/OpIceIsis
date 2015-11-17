@@ -62,9 +62,9 @@
 			<br><p>Please provide ATLEAST 2 fields. Get more info if not</p>
 			<img style="width:200px;height:200px;margin-top:50px;" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg"></img>
                         <form action="submit.php" method="post">
-				 Real Name: 
+				 Real Name:
 				<br><input type="text" style="width:100%; max-width:600px;" name="realname"><br>
-				<br>Link to picture: 
+				<br>Link to picture:
 				<br><input type="text" style="width:100%; max-width:600px;" name="pic"><br>
 				<br>Location:
 				<br><input type="text" style="width:100%; max-width:600px;" name="loc"><br>
@@ -77,6 +77,10 @@
 				<br>Other:
 				<br><textarea name="other"  style="width:100%; max-width:600px;" ></textarea>
 				<br><input type="submit" value="Add">
+        <br><img id="captcha" src="/securimage/securimage_show.php" alt="CAPTCHA Image" /><br>
+        <br><input type="text" name="captcha_code" size="10" maxlength="6" />
+        <a href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a><br>
+
 			</form>
                     </div>
                 </div>
