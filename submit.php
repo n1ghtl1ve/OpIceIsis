@@ -41,7 +41,7 @@ if (isset($realname) && ($pic) && ($loc) && ($twitter) && ($facebook) && ($youtu
   }
 else
   {
-  echo "Alles Leer";
+  echo "Fill out the Form pls";
   }
 
 if ($count >= 2) {
