@@ -35,16 +35,19 @@
             <ul class="sidebar-nav">
 		<br><center><img src="./img/face.png"/></center>
                 <li class="sidebar-brand">
-                        <a href="index.html">#OpIceISIS</b>
+                        <a href="index.php">#OpIceISIS</a>
                 </li>
                 <li>
-                    <a href="add.html">Add IS enthousiast</a>
+                    <a href="add.php">Add IS Enthusiast</a>
                 </li>
                 <li>
-                    <a href="search.html">Search/Edit IS enthousiast</a>
+                    <a href="search.php">Search IS Enthusiast</a>
                 </li>
                 <li>
-                    <a href="rules.html">Rules</a>
+                    <a href="rules.php">Rules</a>
+                </li>
+                <li>
+                <a href="archive.php">Archive</a>
                 </li>
             </ul>
         </div>
@@ -55,8 +58,30 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>Rule</h1>
-                        <p>Rules here</p>
+                        <h1>Add IS Enthusiast</h1>
+			<br><p>Please provide ATLEAST 2 fields. Get more info if not</p>
+			<img style="width:200px;height:200px;margin-top:50px;" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg"></img>
+                        <form action="submit.php" method="post">
+				 Real Name:
+				<br><input type="text" style="width:100%; max-width:600px;" name="realname"><br>
+				<br>Link to picture:
+				<br><input type="text" style="width:100%; max-width:600px;" name="pic"><br>
+				<br>Location:
+				<br><input type="text" style="width:100%; max-width:600px;" name="loc"><br>
+				<br>Twitter account:
+				<br><input type="text" style="width:100%; max-width:600px;" name="twitter"><br>
+				<br>Facebook account:
+				<br><input type="text" style="width:100%; max-width:600px;" name="facebook"><br>
+				<br>Youtube account:
+				<br><input type="text" style="width:100%; max-width:600px;" name="youtube"><br>
+				<br>Other:
+				<br><textarea name="other"  style="width:100%; max-width:600px;" ></textarea>
+				<br><input type="submit" value="Add">
+        <br><img id="captcha" src="/securimage/securimage_show.php" alt="CAPTCHA Image" /><br>
+        <br><input type="text" name="captcha_code" size="10" maxlength="6" />
+        <a href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a><br>
+
+			</form>
                     </div>
                 </div>
             </div>

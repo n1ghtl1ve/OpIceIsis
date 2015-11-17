@@ -35,16 +35,19 @@
             <ul class="sidebar-nav">
 		<br><center><img src="./img/face.png"/></center>
                 <li class="sidebar-brand">
-                        <a href="index.html">#OpIceISIS</a>
+                        <a href="index.php">#OpIceISIS</b>
                 </li>
                 <li>
-                    <a href="add.html">Add IS enthousiast</a>
+                    <a href="add.php">Add IS Enthusiast</a>
                 </li>
                 <li>
-                    <a href="search.html">Search/Edit IS enthousiast</a>
+                    <a href="search.php">Search IS Enthusiast</a>
                 </li>
                 <li>
-                    <a href="rules.html">Rules</a>
+                    <a href="rules.php">Rules</a>
+                </li>
+                <li>
+                <a href="archive.php">Archive</a>
                 </li>
             </ul>
         </div>
@@ -55,25 +58,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>Add IS enthousiast</h1>
-			<br>
-                        <form action="action.php" method="post">
-				 Real Name: 
-				<br><input type="text" style="width:100%; max-width:600px;" name="rname"><br>
-				<br>Link to picture: 
-				<br><input type="text" style="width:100%; max-width:600px;" name="pic"><br>
-				<br>Location:
-				<br><input type="text" style="width:100%; max-width:600px;" name="loc"><br>
-				<br>Twitter account:
-				<br><input type="text" style="width:100%; max-width:600px;" name="twitter"><br>
-				<br>Facebook account:
-				<br><input type="text" style="width:100%; max-width:600px;" name="fb"><br>
-				<br>Youtube account:
-				<br><input type="text" style="width:100%; max-width:600px;" name="yt"><br>
-				<br>Other:
-				<br><textarea name="others"  style="width:100%; max-width:600px;" ></textarea>
-				<br><input type="submit" value="Add">
-			</form>
+                        <h1>Rule</h1>
+                        <p>Join the IRC channels for information. (irc.anonops.com) #OpParis #OpIceISIS<br>1)Verify all accounts before submitting them<br>2)Take all results with a grain of salt.<br>3)Do not flood the database with useless information. YOUR IP WILL BE BLACKLISTED<br>4) Submit atleast 2 accounts or pieces of information for each enthusiast.</p>
                     </div>
                 </div>
             </div>
