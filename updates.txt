@@ -5,3 +5,7 @@ Only Search and Add functionality available. Edit comming soon (11/15/15)
 Changed archive to a cron-job ran every 2 hours (11/17/15)
 Added cron-job to cleandb of empty entries every (11/17/15)
 -Guru
+
+Added captcha check (11/17/15)
+Added minimum value check (11/17/15)
+-n1ghtl1ve
