@@ -35,15 +35,42 @@ $youtube = mysql_real_escape_string($_POST['youtube']);
 $other = mysql_real_escape_string($_POST['other']);
 
 $count = "0";
-if (isset($realname) && ($pic) && ($loc) && ($twitter) && ($facebook) && ($youtube)  && ($other)!= ""))
+if (isset($realname)!= "")
   {
   $count++;
   }
-else
+elseif(isset($pic)!= "")
   {
-  echo "Fill out the Form pls";
+  $count++;
   }
-
+elseif(isset($loc)!= "")
+	{
+	$count++;
+	}
+elseif(isset($twitter)!="")
+	{
+		$count++;
+	}
+elseif(isset($twitter)!="")
+	{
+		$count++;
+	}
+elseif(isset($facebook)!="")
+	{
+		$count++;
+	}
+elseif(isset($youtube)!="")
+	{
+		$count++;
+	}
+elseif(isset($other)!="")
+	{
+		$count++
+	}
+else {
+	echo "Please fill out the form";
+	}
+	
 if ($count >= 2) {
 	$query = "
 	INSERT INTO `$db`.`isismembers` (`id`, `realname`, `location`, `twitter`, `facebook`, `youtube`, `other`, `dateadded`) VALUES (NULL, '$realname', '$loc', '$twitter', '$facebook', '$youtube', '$other', '$timestamp');";
