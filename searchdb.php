@@ -1,8 +1,8 @@
 <?php
 #mysql info
 $server = "localhost";
-$user = "USER";
-$pass = "PASS";
+$user = "";
+$pass = "";
 $db = "opiceisis";
 $timestamp = date("Y-m-d H:i:s"); 
 
