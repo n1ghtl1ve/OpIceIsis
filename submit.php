@@ -34,21 +34,25 @@ $facebook = mysql_real_escape_string($_POST['facebook']);
 $youtube = mysql_real_escape_string($_POST['youtube']);
 $other = mysql_real_escape_string($_POST['other']);
 
-/*
-too sleep deprived but something something check values
-if (count($_POST) < 1){
-	header('Location: http://opiceisis.strangled.net/error.php');
-	die("Not enough information on submit!");
+$count = "0";
+if (isset($realname) && ($pic) && ($loc) && ($twitter) && ($facebook) && ($youtube)  && ($other)!= ""))
+  {
+  $count++;
+  }
+else
+  {
+  echo "Alles Leer";
+  }
+
+if ($count >= 2) {
+	$query = "
+	INSERT INTO `$db`.`isismembers` (`id`, `realname`, `location`, `twitter`, `facebook`, `youtube`, `other`, `dateadded`) VALUES (NULL, '$realname', '$loc', '$twitter', '$facebook', '$youtube', '$other', '$timestamp');";
+
+	mysql_query($query);
+	echo "<h2>Added!</h2>";
+	header("Location:http://opiceisis.strangled.net/");
 }
-*/
 
 
-
-$query = "
-INSERT INTO `$db`.`isismembers` (`id`, `realname`, `location`, `twitter`, `facebook`, `youtube`, `other`, `dateadded`) VALUES (NULL, '$realname', '$loc', '$twitter', '$facebook', '$youtube', '$other', '$timestamp');";
-
-mysql_query($query);
-echo "<h2>Added!</h2>";
-header("Location:http://opiceisis.strangled.net/");
 
 ?>
