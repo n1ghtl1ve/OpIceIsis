@@ -1,6 +1,5 @@
 <?php
 //captcha_code
-php session_start();
 include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
 $securimage = new Securimage();
 if ($securimage->check($_POST['captcha_code']) == false) {
@@ -70,7 +69,7 @@ elseif(isset($other)!="")
 else {
 	echo "Please fill out the form";
 	}
-	
+
 if ($count >= 2) {
 	$query = "
 	INSERT INTO `$db`.`isismembers` (`id`, `realname`, `location`, `twitter`, `facebook`, `youtube`, `other`, `dateadded`) VALUES (NULL, '$realname', '$loc', '$twitter', '$facebook', '$youtube', '$other', '$timestamp');";
