@@ -77,10 +77,8 @@
 				<br>Other:
 				<br><textarea name="other"  style="width:100%; max-width:600px;" ></textarea>
 				<br><input type="submit" value="Add">
-        <br><img id="captcha" src="/securimage/securimage_show.php" alt="CAPTCHA Image" /><br>
-        <br><input type="text" name="captcha_code" size="10" maxlength="6" />
-        <a href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a><br>
-
+        <br><img src="/bilder/captcha/captcha.php" alt="Captcha" title="Captcha - Bitte Zeichen in das Feld eingeben" width=140 height=40 /><br>
+        <input type="text" name="captcha_code" size=10 />
 			</form>
                     </div>
                 </div>
