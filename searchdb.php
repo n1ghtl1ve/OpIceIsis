@@ -13,30 +13,32 @@ if (!$conn)
 }
 mysql_select_db($db, $conn);
 
+$columns = 'realname, location, twitter, twitterstatus, facebook, youtube, other, dateadded';
 if ($_POST['cat'] == "Realname"){
 	$realname = mysql_real_escape_string($_POST['text']);
 	$query = "
-		SELECT realname, location, twitter, facebook, youtube, other, dateadded FROM isismembers WHERE realname LIKE '%$realname%';
+		SELECT $columns FROM isismembers WHERE realname LIKE '%$realname%';
 		";
 	$result = mysql_query($query, $conn);
 	if (! $result){
 		die ("Could not fetch data: " . mysql_error());
 	}
 	while ($row = mysql_fetch_array($result, MYSQL_ASSOC)){
-		echo "Realname: {$row['realname']}<br>".
-	     	"Location: {$row['location']}<br>".
-	     	"Twitter: {$row['twitter']}<br>".
-	     	"Facebook: {$row['facebook']}<br>".
-	     	"Youtube: {$row['youtube']}<br>".
-	     	"Other: {$row['other']}<br>".
-	     	"Dateadded: {$row['dateadded']}<br>".
+		echo "Realname: ".htmlentities($row['realname'])."<br>".
+	     	"Location: ".htmlentities($row['location'])."<br>".
+	     	"Twitter: ".htmlentities($row['twitter'])."<br>".
+	     	"Twitterstatus: ".htmlentities($row['twitterstatus'])."<br>".
+	     	"Facebook: ".htmlentities($row['facebook'])."<br>".
+	     	"Youtube: ".htmlentities($row['youtube'])."<br>".
+	     	"Other: ".htmlentities($row['other'])."<br>".
+	     	"Dateadded: ".htmlentities($row['dateadded'])."<br>".
 	     	"<br><p>----------------------------------------------</p>";
 	}
 }
 else if ($_POST['cat'] == "Location"){
 	$location = mysql_real_escape_string($_POST['text']);
 	$query = "
-		SELECT realname, location, twitter, facebook, youtube, other, dateadded FROM isismembers WHERE location LIKE '%$location%';
+		SELECT $columns FROM isismembers WHERE location LIKE '%$location%';
 		";
 	$result = mysql_query($query, $conn);
 	if (! $result){
@@ -46,6 +48,7 @@ else if ($_POST['cat'] == "Location"){
 		echo "Realname: {$row['realname']}<br>".
 	     	"Location: {$row['location']}<br>".
 	     	"Twitter: {$row['twitter']}<br>".
+	     	"Twitterstatus: {$row['twitterstatus']}<br>".
 	     	"Facebook: {$row['facebook']}<br>".
 	     	"Youtube: {$row['youtube']}<br>".
 	     	"Other: {$row['other']}<br>".
@@ -56,7 +59,7 @@ else if ($_POST['cat'] == "Location"){
 else if ($_POST['cat'] == "Twitter"){
 	$twitter = mysql_real_escape_string($_POST['text']);
 	$query = "
-		SELECT realname, location, twitter, facebook, youtube, other, dateadded FROM isismembers WHERE twitter LIKE '%$twitter%';
+		SELECT $columns FROM isismembers WHERE twitter LIKE '%$twitter%';
 		";
 	$result = mysql_query($query, $conn);
 	if (! $result){
@@ -66,6 +69,7 @@ else if ($_POST['cat'] == "Twitter"){
 		echo "Realname: {$row['realname']}<br>".
 	     	"Location: {$row['location']}<br>".
 	     	"Twitter: {$row['twitter']}<br>".
+	     	"Twitterstatus: {$row['twitterstatus']}<br>".
 	     	"Facebook: {$row['facebook']}<br>".
 	     	"Youtube: {$row['youtube']}<br>".
 	     	"Other: {$row['other']}<br>".
@@ -76,7 +80,7 @@ else if ($_POST['cat'] == "Twitter"){
 else if ($_POST['cat'] == "Facebook"){
 	$facebook = mysql_real_escape_string($_POST['text']);
 	$query = "
-		SELECT realname, location, twitter, facebook, youtube, other, dateadded FROM isismembers WHERE facebook LIKE '%$facebook%';
+		SELECT $columns FROM isismembers WHERE facebook LIKE '%$facebook%';
 		";
 	$result = mysql_query($query, $conn);
 	if (! $result){
@@ -86,6 +90,7 @@ else if ($_POST['cat'] == "Facebook"){
 		echo "Realname: {$row['realname']}<br>".
 	     	"Location: {$row['location']}<br>".
 	     	"Twitter: {$row['twitter']}<br>".
+	     	"Twitterstatus: {$row['twitterstatus']}<br>".
 	     	"Facebook: {$row['facebook']}<br>".
 	     	"Youtube: {$row['youtube']}<br>".
 	     	"Other: {$row['other']}<br>".
@@ -96,7 +101,7 @@ else if ($_POST['cat'] == "Facebook"){
 else if ($_POST['cat'] == "Youtube"){
 	$youtube = mysql_real_escape_string($_POST['text']);
 	$query = "
-		SELECT realname, location, twitter, facebook, youtube, other, dateadded FROM isismembers WHERE youtube LIKE '%$youtube%';
+		SELECT $columns FROM isismembers WHERE youtube LIKE '%$youtube%';
 		";
 	$result = mysql_query($query, $conn);
 	if (! $result){
@@ -106,6 +111,7 @@ else if ($_POST['cat'] == "Youtube"){
 		echo "Realname: {$row['realname']}<br>".
 	     	"Location: {$row['location']}<br>".
 	     	"Twitter: {$row['twitter']}<br>".
+	     	"Twitterstatus: {$row['twitterstatus']}<br>".
 	     	"Facebook: {$row['facebook']}<br>".
 	     	"Youtube: {$row['youtube']}<br>".
 	     	"Other: {$row['other']}<br>".
@@ -116,7 +122,7 @@ else if ($_POST['cat'] == "Youtube"){
 else if ($_POST['cat'] == "Other"){
 	$other = mysql_real_escape_string($_POST['text']);
 	$query = "
-		SELECT realname, location, twitter, facebook, youtube, other, dateadded FROM isismembers WHERE other LIKE '%$other%';
+		SELECT $columns FROM isismembers WHERE other LIKE '%$other%';
 		";
 	$result = mysql_query($query, $conn);
 	if (! $result){
@@ -126,6 +132,7 @@ else if ($_POST['cat'] == "Other"){
 		echo "Realname: {$row['realname']}<br>".
 	     	"Location: {$row['location']}<br>".
 	     	"Twitter: {$row['twitter']}<br>".
+	     	"Twitterstatus: {$row['twitterstatus']}<br>".
 	     	"Facebook: {$row['facebook']}<br>".
 	     	"Youtube: {$row['youtube']}<br>".
 	     	"Other: {$row['other']}<br>".
