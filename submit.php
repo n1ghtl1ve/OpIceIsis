@@ -23,8 +23,6 @@ $facebook = mysql_real_escape_string($_POST['facebook']);
 $youtube = mysql_real_escape_string($_POST['youtube']);
 $other = mysql_real_escape_string($_POST['other']);
 
-if ("" == trim($_POST['captcha_code'])){
-	die("empty captcha!");
 }
 if ($_POST['captcha_code'] == $_SESSION['captcha_spam']) {
 $count = "0";
