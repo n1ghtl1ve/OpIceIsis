@@ -52,7 +52,7 @@
                     <a href="rules.php">Rules</a>
                 </li>
                 <li>
-                <a href="archive.php">Archive</a>
+                <a href="archive.txt">Archive</a>
                 </li>
             </ul>
         </div>

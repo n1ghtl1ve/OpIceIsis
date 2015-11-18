@@ -14,8 +14,8 @@ mysql_select_db($db, $conn);
 $query = "SELECT * FROM isismembers;";
 $result = mysql_unbuffered_query($query);
 
-$file = fopen("../dump.txt", "w") or die ("Unable to open file!");
-
+$file = fopen("../archive.txt", "w") or die ("Unable to open file!");
+fwrite($file, '{"ArchiveDate":"'.$timestamp.'"},');
 while ($row = mysql_fetch_object($result)){
 	fwrite($file, json_encode($row));
 	fwrite($file, ",");

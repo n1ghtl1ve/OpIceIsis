@@ -7,6 +7,7 @@ Archive Database dump available. Parse using comma delimter for data ingestion. 
 Only Search and Add functionality available. Edit comming soon (11/15/15)
 Changed archive to a cron-job ran every 2 hours (11/17/15)
 Added cron-job to cleandb of empty entries every (11/17/15)
+Archives now in json format for bot integration (11/17/15)
 -Guru
 
 Added captcha check (11/17/15)
