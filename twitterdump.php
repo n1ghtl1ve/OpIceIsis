@@ -1,7 +1,7 @@
 <?php
 $server = "localhost";
-$user = "guru";
-$pass = "Pr0misemethis?";
+$user = "";
+$pass = "";
 $db = "opiceisis";
 $timestamp = date("Y-m-d H:i:s"); 
 
