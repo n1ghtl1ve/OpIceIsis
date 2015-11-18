@@ -46,6 +46,12 @@
                 <li>
                     <a href="rules.php">Rules</a>
                 </li>
+                <li>
+                	<a href="news.html">News</a>
+                </li>
+                <li>
+                	<a href="noobs.html">Beginner-Guide</a>
+                </li>
 		<li>
 		<a href="archive.txt">Archive</a>
 		</li>
