@@ -1,16 +1,6 @@
 <?php
 //captcha_code
-include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
-$securimage = new Securimage();
-if ($securimage->check($_POST['captcha_code']) == false) {
-  // the code was incorrect
-  // you should handle the error so that the form processor doesn't continue
-
-  // or you can use the following code if there is no validation or you do not know how
-  echo "The security code entered was incorrect.<br /><br />";
-  echo "Please go <a href='javascript:history.go(-1)'>back</a> and try again.";
-  exit;
-}
+session_start();
 
 $server = "localhost";
 $user = "";
@@ -33,6 +23,7 @@ $facebook = mysql_real_escape_string($_POST['facebook']);
 $youtube = mysql_real_escape_string($_POST['youtube']);
 $other = mysql_real_escape_string($_POST['other']);
 
+if ($_POST['captcha_code'] == $_SESSION['captcha_spam']) {
 $count = "0";
 if (isset($realname)!= "")
   {
@@ -78,7 +69,10 @@ if ($count >= 2) {
 	echo "<h2>Added!</h2>";
 	header("Location:http://opiceisis.strangled.net/");
 }
-
+}
+else {
+  echo "Wrong Captcha";
+}
 
 
 ?>
