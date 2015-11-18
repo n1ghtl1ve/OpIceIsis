@@ -77,7 +77,7 @@
 				<br>Other:
 				<br><textarea name="other"  style="width:100%; max-width:600px;" ></textarea>
 				<br><input type="submit" value="Add">
-        <br><img src="/bilder/captcha/captcha.php" alt="Captcha" title="Captcha - Bitte Zeichen in das Feld eingeben" width=140 height=40 /><br>
+        <br><img src="/captcha/captcha.php" alt="Captcha" title="Captcha - Bitte Zeichen in das Feld eingeben" width=140 height=40 /><br>
         <input type="text" name="captcha_code" size=10 />
 			</form>
                     </div>
