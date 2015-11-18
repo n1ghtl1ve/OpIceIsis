@@ -23,7 +23,7 @@ function get_tag( $attr, $value, $xml )
 }
 
 
-$db = mysql_connect("127.0.0.1", "guru", "Pr0misemethis?");
+$db = mysql_connect("127.0.0.1", "user", "Pass");
 $selected = mysql_select_db("opiceisis",$db);
 $result = mysql_query("SELECT id, twitter FROM isismembers WHERE twitterstatus=1");
 
