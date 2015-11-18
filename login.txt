@@ -1,7 +1,0 @@
-AuthType Basic
-AuthUserFile /www/
-AuthName "Login-Page"
-
-order deny,allow
-allow from all
-require valid user

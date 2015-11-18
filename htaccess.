@@ -1,0 +1,4 @@
+AuthUserFile /etc/apache2/ht/.htpasswd
+AuthName "We Are Anonymous"
+AuthType Basic
+require valid-user
