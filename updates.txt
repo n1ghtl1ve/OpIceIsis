@@ -1,3 +1,6 @@
+Site template and idea (11/13/15)
+-c0dew1zzard
+
 Site under construction (11/14/15)
 Database functionality complete. Front end design underway (11/15/15)
 Archive Database dump available. Parse using comma delimter for data ingestion. (11/15/15)
@@ -9,3 +12,11 @@ Added cron-job to cleandb of empty entries every (11/17/15)
 Added captcha check (11/17/15)
 Added minimum value check (11/17/15)
 -n1ghtl1ve
+
+Captcha check working! (11/17/15)
+-Guru, n1ghtl1ve
+
+TO DO:
+API support
+Edit support
+DB Cleaning

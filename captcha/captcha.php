@@ -1,4 +1,5 @@
 <?php
+putenv('GDFONTPATH=' . realpath('.'));
 	/* PHP-Captcha von:		http://www-coding.de
 	 * Tutorial Artikel: 	http://www-coding.de/so-gehts-eigenes-captcha-mit-php/ 
 	 */
