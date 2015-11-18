@@ -25,54 +25,15 @@ $other = mysql_real_escape_string($_POST['other']);
 
 
 if ($_POST['captcha_code'] == $_SESSION['captcha_spam']) {
-$count = "0";
-if (isset($realname)!= "")
-  {
-  $count++;
-  }
-elseif(isset($pic)!= "")
-  {
-  $count++;
-  }
-elseif(isset($loc)!= "")
-	{
-	$count++;
-	}
-elseif(isset($twitter)!="")
-	{
-		$count++;
-	}
-elseif(isset($twitter)!="")
-	{
-		$count++;
-	}
-elseif(isset($facebook)!="")
-	{
-		$count++;
-	}
-elseif(isset($youtube)!="")
-	{
-		$count++;
-	}
-elseif(isset($other)!="")
-	{
-		$count++;
-	}
-else {
-	echo "Please fill out the form";
-	}
-
-if ($count >= 2) {
 	$query = "
-	INSERT INTO `$db`.`isismembers` (`id`, `realname`, `location`, `twitter`, `facebook`, `youtube`, `other`, `dateadded`) VALUES (NULL, '$realname', '$loc', '$twitter', '$facebook', '$youtube', '$other', '$timestamp');";
+	INSERT INTO `$db`.`isismembers` (`id`, `realname`, `location`, `twitter`, `twitterstatus`, `facebook`, `youtube`, `other`, `dateadded`) VALUES (NULL, '$realname', '$loc', '$twitter', 1, '$facebook', '$youtube', '$other', '$timestamp');";
 
-	mysql_query($query);
+	mysql_query($query) or die("query failed". mysql_error());
 	echo "<h2>Added!</h2>";
-	header("Location:http://opiceisis.strangled.net/");
-}
+	header("Location: http://opiceisis.strangled.net");
 }
 else {
-  echo "Wrong Captcha";
+  echo "Wrong Captcha!";
 }
 
 
