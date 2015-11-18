@@ -13,6 +13,7 @@ CREATE  TABLE IF NOT EXISTS `opiceisis`.`isismembers` (
   `realname` VARCHAR(45) NOT NULL ,
   `location` VARCHAR(45) NULL ,
   `twitter` VARCHAR(45) NULL ,
+  `twitterstatus` INT(1) NULL,
   `facebook` VARCHAR(45) NULL ,
   `youtube` VARCHAR(45) NULL ,
   `other` LONGTEXT NULL ,
